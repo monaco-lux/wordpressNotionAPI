@@ -1,0 +1,141 @@
+{
+    "object": "list",
+    "results": [
+        {
+            "object": "page",
+            "id": "2f6e0497-6619-4191-87fc-cec46bff3d77",
+            "created_time": "2021-11-17T10:06:00.000Z",
+            "last_edited_time": "2021-11-17T15:58:00.000Z",
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "e9dea5e7-2fa7-4f57-9c30-004aa32dc55f"
+            },
+            "archived": false,
+            "properties": {
+                "Meaning": {
+                    "id": "%5Eny%3A",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "This is a really big house",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "This is a really big house",
+                            "href": null
+                        }
+                    ]
+                },
+                "Exists": {
+                    "id": "e_OV",
+                    "type": "checkbox",
+                    "checkbox": true
+                },
+                "DataElement": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "bigHouse",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "bigHouse",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https:\/\/www.notion.so\/bigHouse-2f6e04976619419187fccec46bff3d77"
+        },
+        {
+            "object": "page",
+            "id": "806890bf-6953-4a6a-a52f-cc6b10dbbe35",
+            "created_time": "2021-11-17T10:06:00.000Z",
+            "last_edited_time": "2021-11-17T15:52:00.000Z",
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "e9dea5e7-2fa7-4f57-9c30-004aa32dc55f"
+            },
+            "archived": false,
+            "properties": {
+                "Meaning": {
+                    "id": "%5Eny%3A",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "This is a really small house",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "This is a really small house",
+                            "href": null
+                        }
+                    ]
+                },
+                "Exists": {
+                    "id": "e_OV",
+                    "type": "checkbox",
+                    "checkbox": false
+                },
+                "DataElement": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "smallHouse",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "smallHouse",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https:\/\/www.notion.so\/smallHouse-806890bf69534a6aa52fcc6b10dbbe35"
+        }
+    ],
+    "next_cursor": null,
+    "has_more": false
+}
