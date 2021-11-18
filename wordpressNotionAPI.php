@@ -32,7 +32,7 @@ $data_array =
 ['filter' =>
     [
       "property"=>"DataElement",
-      "title"=>["equals"=>"smallHouse"]
+      "title"=>["equals"=>"bigHouse"]
     ]
 ];
 
@@ -59,10 +59,20 @@ if($e = curl_error($ch))
 } else
 {
 	$decoded = json_decode($resp, true);
-  var_dump($decoded);
+  //var_dump($decoded);
+  foreach($decoded as $key=>$val){
+    echo $key." "."| Value: ".$val."<br>";
+  }
+  echo "<br>"."<br>";
+  echo "<br>"."<br>";
+  echo "<pre>";
+  print_r($decoded['results'][0]['properties']['Meaning']['rich_text'][0]['text']['content']);
+  echo "</pre>";
+  echo "<br>"."<br>";
+  echo $decoded['results'][0]['properties']['Meaning']['rich_text'][0]['text']['content'];
 }
 
-//file_put_contents('test.json',json_encode($decoded, JSON_PRETTY_PRINT));
+file_put_contents('test.json',json_encode($decoded, JSON_PRETTY_PRINT));
 
 curl_close($ch);
 

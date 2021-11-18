@@ -1,0 +1,77 @@
+<script src="https://nymbiz.co.za/nymbotNDA/BotScripts/botchat.js"></script>
+<script>
+let templateName = "Letter of Demand";
+let law = "general";
+let interviewHasLoaded = false;
+let currentTabTitleFinal = "Parties";
+let currentDataElementFinal = "empty data element";
+let currentInterviewTitleFinal;
+function makeid(length) {
+var result = '';
+var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!%+,-./:;<=>?@[^_{|}~';
+var charactersLength = characters.length;
+for ( var i = 0; i < length; i++ ) {
+result += characters.charAt(Math.floor(Math.random() * charactersLength));
+}
+return result;
+}
+let sId = makeid(15)
+console.log(sId);
+function xdox_OnControlEntered(dataElementName){
+currentDataElementFinal = dataElementName;
+document.getElementById("header").innerHTML = currentDataElementFinal;
+
+
+console.log("The control " + dataElementName+ " now has focus.");
+passdataElement();
+}
+
+function xdox_OnInterviewLoaded(interviewTitle) {
+console.log("The interview " + interviewTitle + " has now loaded.");
+templateName = interviewTitle;
+passdataElement();
+interviewHasLoaded = true;
+//passdata(interviewTitle);
+}
+function xdox_OnTabShown(totalNumberOfTabs, currentTabIndex, currentTabTitle)
+{
+if (currentTabTitle == 'Parties' ||currentTabTitle == 'Welcome'){
+
+currentDataElementFinal = 'GeneralHelpMessage';
+}
+console.log("The Selected Tab : " + currentTabTitle + " is now active.");
+currentTabTitleFinal = currentTabTitle;
+
+passdataElement();
+}
+
+function passdataElement(){
+let botConnection;
+var user = {id: 'user-id',name: 'nymbot' };
+var userinfo = { id: 'You', userparam: sId, dataElement: currentDataElementFinal + "=" + currentTabTitleFinal + "*" + law };
+//alert(interviewTitle);
+if(botConnection == null){
+botConnection = new BotChat.DirectLine({ token: '9SdkF1uD4Sc.oaormDjyL9rdnbq46QbE4Mw5woWgGplMK8QDv345kEo',user: user});
+}else{
+return false;
+}
+// alert(botConnection);
+BotChat.App({
+user: userinfo,
+botConnection: botConnection,
+bot: {
+id: 'bot-id',
+name: 'bot name'
+},
+resize: 'detect'
+}, document.getElementById("bot"));
+botConnection.postActivity({
+from: userinfo,
+name: sId,
+type: 'event',
+value: templateName
+}).subscribe(function(id) {
+console.log('"trigger requestWelcomeDialog" sent');});
+}
+
+</script>
